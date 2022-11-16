@@ -14,8 +14,12 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(ResourceNotFoundException.class)
     ResponseEntity<?> handlerResourceNotFoundException(ResourceNotFoundException e){
-        ErrorResponse errorResponse=new ErrorResponse("USER_NOT_FOUND", ServiceException.ErrorType.Client,e.getMessage(), HttpStatus.NOT_FOUND.value());
         return ResponseEntity.status(HttpStatus.NOT_FOUND)
-                .body(errorResponse);
+                .body(ErrorResponse.builder()
+                        .errorCode("USER_NOT_FOUND")
+                        .errorType(ServiceException.ErrorType.Client)
+                        .message(e.getMessage())
+                        .statusCode(HttpStatus.NOT_FOUND.value())
+                        .build());
     }
 }

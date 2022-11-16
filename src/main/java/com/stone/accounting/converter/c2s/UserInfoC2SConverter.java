@@ -17,10 +17,11 @@ public class UserInfoC2SConverter extends Converter<UserInfo, com.stone.accounti
 
     @Override
     protected UserInfo doBackward(com.stone.accounting.model.service.UserInfo userInfo) {
-        UserInfo userInfoResult = new UserInfo();
-        userInfoResult.setId(userInfo.getId());
-        userInfoResult.setUsername(userInfo.getUsername());
-        userInfoResult.setPassword(userInfo.getPassword());
+        UserInfo userInfoResult = UserInfo.builder()
+                .id(userInfo.getId())
+                .username(userInfo.getUsername())
+                .password(userInfo.getPassword())
+                .build();
         return userInfoResult;
     }
 }

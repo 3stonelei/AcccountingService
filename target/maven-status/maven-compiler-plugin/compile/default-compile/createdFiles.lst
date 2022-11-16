@@ -1,3 +1,4 @@
+com\stone\accounting\model\persitence\UserInfo$UserInfoBuilder.class
 com\stone\accounting\Application.class
 com\stone\accounting\converter\p2c\UserInfoP2CConverter.class
 com\stone\accounting\exception\ResourceNotFoundException.class
@@ -12,6 +13,9 @@ com\stone\accounting\manager\impl\UserInfoManagerImpl.class
 com\stone\accounting\model\persitence\UserInfo.class
 com\stone\accounting\dao\impl\UserInfoDAOImpl.class
 com\stone\accounting\dao\UserInfoDAO.class
+com\stone\accounting\exception\ErrorResponse$ErrorResponseBuilder.class
 com\stone\accounting\model\common\UserInfo.class
 com\stone\accounting\model\service\UserInfo.class
 com\stone\accounting\exception\ServiceException$ErrorType.class
+com\stone\accounting\model\common\UserInfo$UserInfoBuilder.class
+com\stone\accounting\model\service\UserInfo$UserInfoBuilder.class

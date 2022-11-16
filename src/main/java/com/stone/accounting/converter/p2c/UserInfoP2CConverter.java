@@ -20,11 +20,12 @@ public class UserInfoP2CConverter extends Converter<UserInfo, com.stone.accounti
 
     @Override
     protected UserInfo doBackward(com.stone.accounting.model.common.UserInfo userInfo) {
-        UserInfo userInfoResult = new UserInfo();
-        userInfoResult.setId(userInfo.getId());
-        userInfoResult.setUsername(userInfo.getUsername());
-        userInfoResult.setPassword(userInfo.getPassword());
-        userInfoResult.setSalt(userInfo.getSalt());
+        UserInfo userInfoResult = UserInfo.builder()
+                .id(userInfo.getId())
+                .password(userInfo.getPassword())
+                .username(userInfo.getUsername())
+                .salt(userInfo.getSalt())
+                .build();
 
         return userInfoResult;
     }
