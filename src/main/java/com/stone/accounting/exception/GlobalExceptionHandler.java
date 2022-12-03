@@ -7,15 +7,18 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 import java.security.InvalidParameterException;
 
-/**
- * @author stone
- * @date 2022/11/15-@20:58
+/*
+ * @Author stone
+ * @Date 2022/12/3 18:02
+ * @Description GlobalExceptionHandler
+
  */
+
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 
     @ExceptionHandler(ResourceNotFoundException.class)
-    ResponseEntity<?> handlerResourceNotFoundException(ResourceNotFoundException e){
+    ResponseEntity<?> handlerResourceNotFoundException(ResourceNotFoundException e) {
         return ResponseEntity.status(HttpStatus.NOT_FOUND)
                 .body(ErrorResponse.builder()
                         .errorCode("USER_NOT_FOUND")
@@ -24,8 +27,9 @@ public class GlobalExceptionHandler {
                         .statusCode(HttpStatus.NOT_FOUND.value())
                         .build());
     }
+
     @ExceptionHandler(InvalidParameterException.class)
-    ResponseEntity<?> handlerInvalidParameterException(InvalidParameterException e){
+    ResponseEntity<?> handlerInvalidParameterException(InvalidParameterException e) {
         return ResponseEntity.status(HttpStatus.NOT_ACCEPTABLE)
                 .body(ErrorResponse.builder()
                         .errorCode("ID_IS_INVALID")

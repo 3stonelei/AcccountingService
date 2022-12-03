@@ -5,8 +5,7 @@ import com.stone.accounting.model.persistence.UserInfo;
 import org.springframework.stereotype.Component;
 
 /**
- * @author stone
- * @date 2022/11/15-@15:06
+ * Persistence UserInfo converter to common UserInfo.
  */
 @Component
 public class UserInfoP2CConverter extends Converter<UserInfo, com.stone.accounting.model.common.UserInfo> {

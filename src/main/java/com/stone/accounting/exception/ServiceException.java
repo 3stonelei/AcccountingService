@@ -1,8 +1,7 @@
 package com.stone.accounting.exception;
 
 /**
- * @author stone
- * @date 2022/11/15-@17:41
+ * Exception class for ServiceException.
  */
 public class ServiceException extends RuntimeException {
     private int statusCode;
@@ -40,7 +39,7 @@ public class ServiceException extends RuntimeException {
         this.errorType = errorType;
     }
 
-    public enum ErrorType{
+    public enum ErrorType {
         Client,
         Service,
         Unknown

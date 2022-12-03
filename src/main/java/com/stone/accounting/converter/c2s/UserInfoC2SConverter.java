@@ -5,8 +5,7 @@ import com.stone.accounting.model.common.UserInfo;
 import org.springframework.stereotype.Component;
 
 /**
- * @author stone
- * @date 2022/11/15-@15:03
+ * Common UserInfo Converter To Service UserInfo.
  */
 @Component
 public class UserInfoC2SConverter extends Converter<UserInfo, com.stone.accounting.model.service.UserInfo> {

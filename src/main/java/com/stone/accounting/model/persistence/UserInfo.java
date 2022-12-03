@@ -1,12 +1,15 @@
 package com.stone.accounting.model.persistence;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import java.sql.Timestamp;
 
 /**
- * @author stone
- * @date 2022/11/15-@14:40
+ * Persistence UserInfo Entity.
  */
 @Data
 @ToString

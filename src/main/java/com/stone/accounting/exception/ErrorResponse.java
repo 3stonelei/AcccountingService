@@ -1,11 +1,15 @@
 package com.stone.accounting.exception;
 
-import lombok.*;
+import lombok.Builder;
+import lombok.Data;
 
-/**
- * @author stone
- * @date 2022/11/15-@20:29
+
+/*
+ * @Author stone
+ * @Date 2022/12/3 18:02
+ * @Description ErrorResponse
  */
+
 @Data
 @Builder
 public class ErrorResponse {

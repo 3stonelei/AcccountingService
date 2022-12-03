@@ -1,18 +1,17 @@
 package com.stone.accounting.dao.impl;
 
-import com.stone.accounting.dao.UserInfoDAO;
+import com.stone.accounting.dao.UserInfoDao;
 import com.stone.accounting.dao.mapper.UserInfoMapper;
 import com.stone.accounting.model.persistence.UserInfo;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 
 /**
- * @author stone
- * @date 2022/11/14-@23:07
+ * Implements UserInfoDao.
  */
 @Repository
 @RequiredArgsConstructor
-public class UserInfoDAOImpl implements UserInfoDAO {
+public class UserInfoDaoImpl implements UserInfoDao {
 
 
     private final UserInfoMapper userInfoMapper;

@@ -1,6 +1,6 @@
 package com.stone.accounting.dao;
 
-import com.stone.accounting.dao.impl.UserInfoDAOImpl;
+import com.stone.accounting.dao.impl.UserInfoDaoImpl;
 import com.stone.accounting.dao.mapper.UserInfoMapper;
 import com.stone.accounting.model.persistence.UserInfo;
 import org.junit.jupiter.api.Assertions;
@@ -21,16 +21,16 @@ import java.time.Instant;
  */
 @SpringBootTest
 @ExtendWith(MockitoExtension.class)
-public class UserInfoDAOTest {
+public class UserInfoDaoTest {
 
     @Mock
     private UserInfoMapper userInfoMapper;
 
-    private UserInfoDAO userInfoDAO;
+    private UserInfoDao userInfoDAO;
 
     @BeforeEach
     public void setup(){
-        userInfoDAO=new UserInfoDAOImpl(userInfoMapper);
+        userInfoDAO=new UserInfoDaoImpl(userInfoMapper);
     }
 
     @Test

@@ -1,10 +1,13 @@
 package com.stone.accounting.model.service;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 /**
- * @author stone
- * @date 2022/11/15-@14:39
+ * Service userInfo Entity.
  */
 @Data
 @ToString

@@ -1,7 +1,7 @@
 package com.stone.accounting.manager;
 
 import com.stone.accounting.converter.p2c.UserInfoP2CConverter;
-import com.stone.accounting.dao.UserInfoDAO;
+import com.stone.accounting.dao.UserInfoDao;
 import com.stone.accounting.exception.ResourceNotFoundException;
 import com.stone.accounting.model.persistence.UserInfo;
 import lombok.val;
@@ -30,7 +30,7 @@ public class UserInfoManagerTest {
     private UserInfoManager userInfoManager;
 
     @Mock
-    private UserInfoDAO userInfoDAO;
+    private UserInfoDao userInfoDAO;
 
     @BeforeEach
     public void setup(){

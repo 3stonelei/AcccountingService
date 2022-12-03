@@ -6,8 +6,7 @@ import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 
 /**
- * @author stone
- * @date 2022/11/15-@15:19
+ * interface UserInfoMapper.
  */
 @Mapper
 public interface UserInfoMapper {

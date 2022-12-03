@@ -3,11 +3,9 @@ package com.stone.accounting.dao;
 import com.stone.accounting.model.persistence.UserInfo;
 
 /**
- * @author stone
- * @date 2022/11/14-@23:07++++++++++++++++++++++++++++++++++++++++++++++++++++++
- *
+ * UserInfoDao.
  */
-public interface UserInfoDAO {
+public interface UserInfoDao {
 
     UserInfo getUserById(Long id);
 }

@@ -1,10 +1,13 @@
 package com.stone.accounting.model.common;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 /**
- * @author stone
- * @date 2022/11/15-@14:40
+ * Common UserInfo Entity.
  */
 @Data
 @ToString
