@@ -29,3 +29,18 @@
     - common ：对应manager层    
     - persistence：对应持久化，与数据库表一一对应
     - service：对应Controller层使用
+## 3.测试方法
+### 引入maven依赖
+```<dependency>
+               <groupId>org.springframework.boot</groupId>
+               <artifactId>spring-boot-starter-test</artifactId>
+               <scope>test</scope>
+               <exclusions>
+                   <exclusion>
+                       <groupId>org.junit.vintage</groupId>
+                       <artifactId>junit-vintage-engine</artifactId>
+                   </exclusion>
+               </exclusions>
+           </dependency>
+<!-- 使用junit5测试--> 
+```

@@ -1,11 +1,8 @@
 package com.stone.accounting.converter.p2c;
 
 import com.google.common.base.Converter;
-import com.stone.accounting.model.persitence.UserInfo;
+import com.stone.accounting.model.persistence.UserInfo;
 import org.springframework.stereotype.Component;
-
-import java.sql.Timestamp;
-import java.time.format.DateTimeFormatter;
 
 /**
  * @author stone

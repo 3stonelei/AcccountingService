@@ -2,9 +2,8 @@ package com.stone.accounting.dao.impl;
 
 import com.stone.accounting.dao.UserInfoDAO;
 import com.stone.accounting.dao.mapper.UserInfoMapper;
-import com.stone.accounting.model.persitence.UserInfo;
+import com.stone.accounting.model.persistence.UserInfo;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 /**

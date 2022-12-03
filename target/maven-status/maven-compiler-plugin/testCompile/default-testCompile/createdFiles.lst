@@ -1,0 +1,5 @@
+com\stone\accounting\controller\UserInfoControllerTest.class
+com\stone\accounting\dao\UserInfoDAOTest.class
+com\stone\accounting\converter\UserInfoP2CConverterTest.class
+com\stone\accounting\manager\UserInfoManagerTest.class
+com\stone\accounting\converter\UserInfoC2SConverterTest.class

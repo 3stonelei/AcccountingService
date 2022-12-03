@@ -5,6 +5,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
+import java.security.InvalidParameterException;
+
 /**
  * @author stone
  * @date 2022/11/15-@20:58
@@ -20,6 +22,16 @@ public class GlobalExceptionHandler {
                         .errorType(ServiceException.ErrorType.Client)
                         .message(e.getMessage())
                         .statusCode(HttpStatus.NOT_FOUND.value())
+                        .build());
+    }
+    @ExceptionHandler(InvalidParameterException.class)
+    ResponseEntity<?> handlerInvalidParameterException(InvalidParameterException e){
+        return ResponseEntity.status(HttpStatus.NOT_ACCEPTABLE)
+                .body(ErrorResponse.builder()
+                        .errorCode("ID_IS_INVALID")
+                        .errorType(ServiceException.ErrorType.Client)
+                        .message(e.getMessage())
+                        .statusCode(HttpStatus.NOT_ACCEPTABLE.value())
                         .build());
     }
 }

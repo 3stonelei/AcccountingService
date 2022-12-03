@@ -1,4 +1,4 @@
-package com.stone.accounting.model.persitence;
+package com.stone.accounting.model.persistence;
 
 import lombok.*;
 

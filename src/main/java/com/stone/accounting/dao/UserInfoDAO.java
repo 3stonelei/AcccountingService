@@ -1,7 +1,6 @@
 package com.stone.accounting.dao;
 
-import com.stone.accounting.model.persitence.UserInfo;
-import org.apache.ibatis.annotations.Param;
+import com.stone.accounting.model.persistence.UserInfo;
 
 /**
  * @author stone
