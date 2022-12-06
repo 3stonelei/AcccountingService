@@ -9,6 +9,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -33,16 +34,17 @@ public class UserInfoManagerTest {
     private UserInfoDao userInfoDAO;
 
     @BeforeEach
-    public void setup(){
-        userInfoManager=new UserInfoManagerImpl(userInfoDAO,new UserInfoP2CConverter());
+    public void setup() {
+        MockitoAnnotations.initMocks(this);
+        userInfoManager = new UserInfoManagerImpl(userInfoDAO, new UserInfoP2CConverter());
     }
 
     @Test
-    public void testGetUserInfoById(){
+    public void testGetUserInfoById() {
 
-        Long userId= 1L;
+        Long userId = 1L;
 
-        UserInfo userInfo=UserInfo.builder()
+        UserInfo userInfo = UserInfo.builder()
                 .id(userId)
                 .username("hardcore")
                 .password("hardcore")
@@ -57,19 +59,20 @@ public class UserInfoManagerTest {
 
 
         assertThat(result).isNotNull()
-                .hasFieldOrPropertyWithValue("id",userId)
-                .hasFieldOrPropertyWithValue("username","hardcore")
-                .hasFieldOrPropertyWithValue("password","hardcore");
+                .hasFieldOrPropertyWithValue("id", userId)
+                .hasFieldOrPropertyWithValue("username", "hardcore")
+                .hasFieldOrPropertyWithValue("password", "hardcore");
 
 
     }
 
     @Test
-    void testGetUserInfoByIdWithInvalidUserId(){
+    void testGetUserInfoByIdWithInvalidUserId() {
         Long userId = -1L;
-        doReturn(null).when(userInfoDAO.getUserById(userId));
 
-        assertThrows(ResourceNotFoundException.class,()->userInfoManager.getUserById(userId));
-        verify(userInfoManager).getUserById(userId);
+        doReturn(null).when(userInfoDAO).getUserById(userId);
+
+        assertThrows(ResourceNotFoundException.class, () -> userInfoManager.getUserById(userId));
+        verify(userInfoDAO).getUserById(eq(userId));
     }
 }

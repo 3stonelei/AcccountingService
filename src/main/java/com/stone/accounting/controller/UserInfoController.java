@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.security.InvalidParameterException;
+import javax.validation.constraints.NotNull;
 
 /**
  * UserInfoController.
@@ -25,13 +26,14 @@ public class UserInfoController {
 
     /**
      * Get UserInfo by userId.
+     *
      * @param id userId
      * @return ResponseEntity
      */
     @RequestMapping("/search/{id}")
-    public ResponseEntity<?> getUserInfo(@PathVariable("id") Long id) {
+    public ResponseEntity<?> getUserInfo(@PathVariable("id") @NotNull Long id) {
 
-        if (id == null || id <= 0L) {
+        if (id <= 0L) {
             throw new InvalidParameterException(String.format("the user id %s is invalid", id));
         }
         com.stone.accounting.model.common.UserInfo userInfo = userInfoManager.getUserById(id);

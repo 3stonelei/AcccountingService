@@ -91,6 +91,9 @@ public class UserInfoControllerTest {
                 .andExpect(status().is4xxClientError())
                 .andExpect(content().contentType("application/json"))
                 .andExpect(content().string("{\"errorCode\":\"ID_IS_INVALID\",\"errorType\":\"Client\",\"message\":\"the user id -1 is invalid\",\"statusCode\":406}"));
+
+        verify(userInfoManager,never()).getUserById(userId);
     }
+
 
 }

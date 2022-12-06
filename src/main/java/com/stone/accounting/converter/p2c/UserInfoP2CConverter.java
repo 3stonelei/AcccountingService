@@ -2,16 +2,23 @@ package com.stone.accounting.converter.p2c;
 
 import com.google.common.base.Converter;
 import com.stone.accounting.model.persistence.UserInfo;
+import lombok.EqualsAndHashCode;
 import org.springframework.stereotype.Component;
 
 /**
  * Persistence UserInfo converter to common UserInfo.
  */
 @Component
+@EqualsAndHashCode(callSuper = true)
 public class UserInfoP2CConverter extends Converter<UserInfo, com.stone.accounting.model.common.UserInfo> {
     @Override
     protected com.stone.accounting.model.common.UserInfo doForward(UserInfo userInfo) {
-        return new com.stone.accounting.model.common.UserInfo(userInfo.getId(),userInfo.getUsername(),userInfo.getSalt(),userInfo.getPassword());
+        return com.stone.accounting.model.common.UserInfo.builder()
+                .id(userInfo.getId())
+                .username(userInfo.getUsername())
+                .password(userInfo.getPassword())
+                .salt(userInfo.getSalt())
+                .build();
     }
 
     @Override

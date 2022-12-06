@@ -8,9 +8,9 @@ D:\myjava\AccountingService\src\main\java\com\stone\accounting\model\service\Use
 D:\myjava\AccountingService\src\main\java\com\stone\accounting\controller\UserInfoController.java
 D:\myjava\AccountingService\src\main\java\com\stone\accounting\exception\ErrorResponse.java
 D:\myjava\AccountingService\src\main\java\com\stone\accounting\exception\GlobalExceptionHandler.java
-D:\myjava\AccountingService\src\main\java\com\stone\accounting\dao\impl\UserInfoDAOImpl.java
+D:\myjava\AccountingService\src\main\java\com\stone\accounting\dao\impl\UserInfoDaoImpl.java
 D:\myjava\AccountingService\src\main\java\com\stone\accounting\manager\UserInfoManagerImpl.java
 D:\myjava\AccountingService\src\main\java\com\stone\accounting\model\common\UserInfo.java
-D:\myjava\AccountingService\src\main\java\com\stone\accounting\dao\UserInfoDAO.java
+D:\myjava\AccountingService\src\main\java\com\stone\accounting\dao\UserInfoDao.java
 D:\myjava\AccountingService\src\main\java\com\stone\accounting\exception\ServiceException.java
 D:\myjava\AccountingService\src\main\java\com\stone\accounting\converter\c2s\UserInfoC2SConverter.java
